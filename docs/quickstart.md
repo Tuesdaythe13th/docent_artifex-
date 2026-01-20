@@ -371,3 +371,25 @@ Docent can only catch issues that are evident from the context it has about your
 
 - If you're looking to catch issues with solution labels, you should provide the exact label in the metadata, not just the agent's score.
 - For software engineering tasks, if you want to know *why* agents failed, you should include information about what tests were run and their traceback/execution logs.
+
+#### Updating a transcript file in another repo
+
+If your ingestion JSON lives in a separate repository (for example, a project-specific repo), keep the update loop simple and explicit:
+
+1. Clone or open the repo locally.
+2. Edit the transcript JSON (or the source log you transform into JSON).
+3. Commit and push the change so your ingestion script can fetch the updated file.
+4. Re-run your ingestion script against the updated URL or local file path.
+
+Example (replace paths and filenames with your repo layout):
+
+```bash
+git clone git@github.com:your-org/your-repo.git
+cd your-repo
+${EDITOR:-nano} path/to/FAIENCE_DOCENT_READY.json
+git add path/to/FAIENCE_DOCENT_READY.json
+git commit -m "Update transcript payload"
+git push
+```
+
+If you are downloading the file in your ingestion script, make sure you fetch the latest revision or pin the URL to a specific commit so your runs are reproducible.
