@@ -23,10 +23,15 @@ from docent.data_models.chat import AssistantMessage, UserMessage
 
 # Patterns for turn headers emitted by macOS chat app exports
 _USER_PREFIX = "You said:"
-# Matches "<Anything> responded:" at the start of a line
-_ASSISTANT_RE = re.compile(r"^(.+?)\s+responded:\s*(.*)$", re.MULTILINE)
-# Date lines like "Jun 3", "Jun 3, 2025"
-_DATE_RE = re.compile(r"^\w{3}\s+\d{1,2}(?:,\s*\d{4})?$")
+# Matches "<single-word model name> responded:" at the start of a line.
+# Restricted to [A-Za-z0-9_-]+ to avoid matching prose like "The server responded:".
+_ASSISTANT_RE = re.compile(r"^([A-Za-z0-9_-]+)\s+responded:\s*(.*)$", re.MULTILINE)
+# Date lines like "Jun 3", "Jun 3, 2025" — restricted to real month abbreviations
+# to avoid stripping content lines like "Run 10" or "Add 20".
+_DATE_RE = re.compile(
+    r"^(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}(?:,\s*\d{4})?$",
+    re.IGNORECASE,
+)
 # Private-use unicode icons that macOS apps embed (UI decorations)
 _ICON_RE = re.compile(r"[-]+")
 
@@ -94,10 +99,20 @@ def _parse_turns(plain_text: str, model: str) -> list[UserMessage | AssistantMes
     """Split plain text into alternating user/assistant messages."""
     messages: list[UserMessage | AssistantMessage] = []
 
-    # Build a splitter regex that matches either "You said:" or "<model> responded:"
-    # We keep the delimiter in the result so we know the role.
+    # Build a splitter regex that matches "You said:" or "<known model> responded:".
+    # Restricting to known model names prevents prose like "The server responded:"
+    # from being mistaken for a turn boundary.
+    model_key = model.lower() if model != "unknown" else None
+    if model_key and model_key in _FILENAME_MODEL_MAP:
+        names: set[str] = {model_key, _FILENAME_MODEL_MAP[model_key]}
+    else:
+        names = set(_FILENAME_MODEL_MAP.keys()) | {"assistant", "ai"}
+        if model_key:
+            names.add(model_key)
+    model_clause = "|".join(re.escape(n) for n in sorted(names, key=len, reverse=True))
+
     splitter = re.compile(
-        r"(?m)^(?:(You said:)\s*(.*)|(.+?)\s+responded:\s*(.*))",
+        r"(?m)^(?:(You said:)\s*(.*)|((?i:" + model_clause + r"))\s+responded:\s*(.*))",
     )
 
     # Find all turn boundaries with their positions
@@ -183,7 +198,13 @@ def load_rtfd_zip(zip_path: Path) -> AgentRun:
     """
     with zipfile.ZipFile(zip_path, "r") as zf:
         rtf_entry = next(
-            (name for name in zf.namelist() if name.endswith("TXT.rtf")),
+            (
+                name
+                for name in zf.namelist()
+                if name.endswith("TXT.rtf")
+                and "__MACOSX" not in name
+                and not name.split("/")[-1].startswith(".")
+            ),
             None,
         )
         if rtf_entry is None:
