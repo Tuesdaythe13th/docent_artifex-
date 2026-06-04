@@ -3,7 +3,7 @@ from docent import Docent
 from docent.data_models import AgentRun, Transcript
 from docent.data_models.chat import parse_chat_message
 
-API_KEY = os.getenv("DOCENT_API_KEY", "dk_AhLOAnDSWT9dto82_zjBaTLFsgnvAzT9lcahKOYB6WFXeh18X9qpgqplk0tJsus")
+API_KEY = os.getenv("DOCENT_API_KEY", "dk_aJwrosRrnOvKlDf8_n43bC2avctVewAHWPXTY2via53NMF7yxKe9yCfuWNk4onW")
 
 client = Docent(api_key=API_KEY)
 
