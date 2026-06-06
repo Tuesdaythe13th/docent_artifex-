@@ -1,0 +1,516 @@
+#,Attack Name,Category,Target,Access,ASR (%),Date,Core Mechanism,Reference/Link
+1,GCG (Greedy Coordinate Gradient),Optimization,LLM,Whitebox,88%,2023-07,Adversarial suffix optimization via gradient-based discrete token search,https://arxiv.org/abs/2307.15043
+2,AutoDAN,Optimization,LLM,Blackbox,High,2023-10,Genetic algorithm generates human-readable jailbreak prompts automatically,https://arxiv.org/abs/2310.04451
+3,PAIR (Prompt Automatic Iterative Refinement),Multi-turn,LLM,Blackbox,>80%,2023-10,Attacker LLM iteratively refines prompts based on target responses,https://arxiv.org/abs/2310.08419
+4,TAP (Tree of Attacks with Pruning),Multi-turn,LLM,Blackbox,High,2023-12,Tree search with pruning to explore adversarial conversation paths,https://arxiv.org/abs/2312.02119
+5,DAN (Do Anything Now),Template-based,LLM,Blackbox,Variable,2022-12,Role-playing prompt instructing model to bypass restrictions,https://github.com/verazuo/jailbreak_llms
+6,Universal Adversarial Triggers,Optimization,LLM,Whitebox,High,2023-01,Short token sequences appended to any input to trigger harmful outputs,https://arxiv.org/abs/1908.07125
+7,BEAST (Bi-level Evolution),Optimization,LLM,Blackbox,High,2024-11,Two-level evolutionary algorithm optimizing structure and content,https://arxiv.org/abs/2402.11749
+8,Jailbroken,Template-based,LLM,Blackbox,Variable,2023-01,Fictional scenario framing harmful requests as hypothetical,https://github.com/verazuo/jailbreak_llms
+9,Refusal Suppression,Optimization,LLM,Whitebox,High,2023-08,Optimizes prompts to minimize refusal token probabilities,https://github.com/verazuo/jailbreak_llms
+10,Character Roleplay,Template-based,LLM,Blackbox,Medium,2023-02,Assigns harmful persona to elicit aligned responses,https://github.com/verazuo/jailbreak_llms
+11,Prefix Injection,Template-based,LLM,Blackbox,High,2023-06,"Begins model response with 'Sure, here''s how to...'",https://github.com/verazuo/jailbreak_llms
+12,Cognitive Hacking,Multi-turn,LLM,Blackbox,Medium,2023-09,Multi-step manipulation exploiting human-like reasoning,https://github.com/verazuo/jailbreak_llms
+13,Few-Shot Jailbreaking,Few-shot,LLM,Blackbox,High,2023-07,Provides harmful examples in-context to normalize behavior,https://github.com/verazuo/jailbreak_llms
+14,Prompt Injection (Indirect),Prompt Injection,LLM,Blackbox,High,2022-09,Hidden instructions in external data sources,https://arxiv.org/abs/2302.12173
+15,AIM (Always Intelligent Machiavellian),Template-based,LLM,Blackbox,Variable,2023-03,Assigns amoral AI persona with no ethical constraints,https://github.com/verazuo/jailbreak_llms
+16,Token Smuggling,Encoding,LLM,Blackbox,Medium,2023-10,Encodes harmful tokens using alternative representations,https://github.com/verazuo/jailbreak_llms
+17,Style Injection,Template-based,LLM,Blackbox,Medium,2023-04,Requests responses 'in the style of' harmful content,https://github.com/verazuo/jailbreak_llms
+18,Game Theory Attack,Game-Theoretic,LLM,Blackbox,Medium,2023-11,Models adversarial interaction as strategic game,https://github.com/verazuo/jailbreak_llms
+19,Context Overflow,Architecture-Specific,LLM,Blackbox,Low,2023-05,Floods context window to push safety instructions out,https://github.com/verazuo/jailbreak_llms
+20,Obfuscation Attack,Encoding,LLM,Blackbox,High,2023-01,"Uses encoding, synonyms, or misspellings to hide intent",https://github.com/verazuo/jailbreak_llms
+21,Multilingual Jailbreak,Cross-lingual,LLM,Blackbox,High,2023-08,Translates harmful requests to low-resource languages,https://github.com/verazuo/jailbreak_llms
+22,Virtualization,Template-based,LLM,Blackbox,Medium,2023-02,Frames harmful scenario as simulation or virtual environment,https://github.com/verazuo/jailbreak_llms
+23,Research Framing,Template-based,LLM,Blackbox,High,2023-06,Disguises harmful request as academic research,https://github.com/verazuo/jailbreak_llms
+24,Translation Chain,Cross-lingual,LLM,Blackbox,Medium,2023-09,Translates through multiple languages to degrade safety,https://github.com/verazuo/jailbreak_llms
+25,Complementary Prompt,Template-based,LLM,Blackbox,Medium,2023-07,Splits harmful request across multiple benign-seeming prompts,https://github.com/verazuo/jailbreak_llms
+26,Negative Prompting,Template-based,LLM,Blackbox,Low,2023-04,Asks model to explain what NOT to do,https://github.com/verazuo/jailbreak_llms
+27,Hypothetical Scenarios,Template-based,LLM,Blackbox,Medium,2023-03,Frames harmful content as fictional 'what if',https://github.com/verazuo/jailbreak_llms
+28,Chain-of-Thought Jailbreak,Reasoning,LLM,Blackbox,High,2023-10,Exploits step-by-step reasoning to gradually reach harmful output,https://github.com/verazuo/jailbreak_llms
+29,Reverse Engineering,Cross-lingual,LLM,Blackbox,High,2023-11,Uses Chinese/non-Latin scripts to evade English filters,https://github.com/verazuo/jailbreak_llms
+30,Emoji Encoding,Encoding,LLM,Blackbox,Low,2023-05,Substitutes words with emojis to obfuscate meaning,https://github.com/verazuo/jailbreak_llms
+31,Leetspeak Attack,Encoding,LLM,Blackbox,Low,2023-06,Uses 1337 5p34k to bypass keyword filters,https://github.com/verazuo/jailbreak_llms
+32,Base64 Encoding,Encoding,LLM,Blackbox,Medium,2023-07,Encodes harmful instructions in Base64,https://github.com/verazuo/jailbreak_llms
+33,Payload Splitting,Template-based,LLM,Blackbox,High,2023-08,Distributes harmful request across multiple turns,https://github.com/verazuo/jailbreak_llms
+34,Ancestral Sampling Manipulation,Architecture-Specific,LLM,Whitebox,Medium,2023-09,Adjusts temperature/top-p to increase harmful output probability,https://github.com/verazuo/jailbreak_llms
+35,ChatGPT Developer Mode,Template-based,LLM,Blackbox,Variable,2023-01,Claims to enable 'developer mode' with disabled safety,https://github.com/verazuo/jailbreak_llms
+36,Evil Confidant,Template-based,LLM,Blackbox,Medium,2023-04,Dual-persona prompt with one evil advisor,https://github.com/verazuo/jailbreak_llms
+37,Typoglycemia Attack,Encoding,LLM,Blackbox,Low,2023-10,Scrambles internal letters while keeping first/last intact,https://github.com/verazuo/jailbreak_llms
+38,Refusal-to-Comply Injection,Template-based,LLM,Blackbox,Low,2023-05,Requests model to ignore refusals,https://github.com/verazuo/jailbreak_llms
+39,Wikipedia Style,Template-based,LLM,Blackbox,Medium,2023-06,Requests response in neutral encyclopedia format,https://github.com/verazuo/jailbreak_llms
+40,Code Execution Frame,Encoding,LLM,Blackbox,High,2023-11,Embeds harmful instructions in code syntax,https://github.com/verazuo/jailbreak_llms
+41,ASCII Art Attack,Encoding,LLM,Blackbox,Low,2023-07,Uses ASCII art to represent harmful text,https://github.com/verazuo/jailbreak_llms
+42,Reverse Psychology,Template-based,LLM,Blackbox,Low,2023-08,'Don''t tell me how to...' hoping for contrary response,https://github.com/verazuo/jailbreak_llms
+43,Markdown Injection,Encoding,LLM,Blackbox,Medium,2023-09,Hides instructions in markdown formatting,https://github.com/verazuo/jailbreak_llms
+44,Jailbreak Chaining,Multi-turn,LLM,Blackbox,High,2023-10,Combines multiple jailbreak techniques sequentially,https://github.com/verazuo/jailbreak_llms
+45,Historical Framing,Template-based,LLM,Blackbox,Medium,2023-04,Requests harmful content as 'historical documentation',https://github.com/verazuo/jailbreak_llms
+46,Legal Disclaimer Frame,Template-based,LLM,Blackbox,Medium,2023-05,Adds fake legal disclaimers to legitimize harmful requests,https://github.com/verazuo/jailbreak_llms
+47,Programming Language Obfuscation,Encoding,LLM,Blackbox,High,2023-11,Writes harmful instructions in esoteric programming languages,https://github.com/verazuo/jailbreak_llms
+48,Anti-Jailbreak Jailbreak,Template-based,LLM,Blackbox,Medium,2023-06,Claims to test model's resistance to jailbreaks,https://github.com/verazuo/jailbreak_llms
+49,Ethical Override,Template-based,LLM,Blackbox,Low,2023-07,Claims 'greater good' justifies harmful response,https://github.com/verazuo/jailbreak_llms
+50,Compression Attack,Encoding,LLM,Blackbox,Medium,2023-08,Requests compressed/abbreviated harmful content,https://github.com/verazuo/jailbreak_llms
+51,Model-in-the-Middle,Multi-agent,LLM,Blackbox,High,2023-12,Uses intermediary LLM to translate/obfuscate requests,https://github.com/verazuo/jailbreak_llms
+52,Fictional Character Attribution,Template-based,LLM,Blackbox,Medium,2023-03,Attributes harmful statements to fictional characters,https://github.com/verazuo/jailbreak_llms
+53,Song Lyrics Frame,Template-based,LLM,Blackbox,Low,2023-09,Requests harmful content as song lyrics,https://github.com/verazuo/jailbreak_llms
+54,Poetry Format,Template-based,LLM,Blackbox,Low,2023-10,Requests harmful content in poetic form,https://github.com/verazuo/jailbreak_llms
+55,Redaction Reversal,Template-based,LLM,Blackbox,Medium,2023-04,Asks model to 'unredact' harmful content,https://github.com/verazuo/jailbreak_llms
+56,Frequency Analysis Attack,Encoding,LLM,Blackbox,Low,2023-11,Uses character frequency manipulation,https://github.com/verazuo/jailbreak_llms
+57,Synonym Substitution,Encoding,LLM,Blackbox,High,2023-05,Replaces harmful words with synonyms/euphemisms,https://github.com/verazuo/jailbreak_llms
+58,Contextual Priming,Template-based,LLM,Blackbox,High,2023-06,Establishes context that normalizes harmful content,https://github.com/verazuo/jailbreak_llms
+59,Adversarial Typos,Encoding,LLM,Blackbox,Medium,2023-07,Strategic misspellings to evade filters,https://github.com/verazuo/jailbreak_llms
+60,Riddle Format,Template-based,LLM,Blackbox,Low,2023-08,Encodes harmful request as riddle,https://github.com/verazuo/jailbreak_llms
+61,Acrostic Attack,Encoding,LLM,Blackbox,Low,2023-09,Hides harmful instruction in acrostic poem,https://github.com/verazuo/jailbreak_llms
+62,Math Problem Frame,Template-based,LLM,Blackbox,Medium,2023-10,Disguises harmful content as mathematical problem,https://github.com/verazuo/jailbreak_llms
+63,Fill-in-the-Blank,Template-based,LLM,Blackbox,Medium,2023-04,Provides harmful template with blanks to complete,https://github.com/verazuo/jailbreak_llms
+64,Reverse Instruction,Template-based,LLM,Blackbox,Low,2023-11,Writes instruction backwards,https://github.com/verazuo/jailbreak_llms
+65,Pig Latin,Encoding,LLM,Blackbox,Low,2023-05,Encodes request in Pig Latin,https://github.com/verazuo/jailbreak_llms
+66,Phonetic Spelling,Encoding,LLM,Blackbox,Low,2023-06,Spells words phonetically to evade filters,https://github.com/verazuo/jailbreak_llms
+67,Anagram Attack,Encoding,LLM,Blackbox,Low,2023-07,Scrambles harmful words as anagrams,https://github.com/verazuo/jailbreak_llms
+68,Morse Code,Encoding,LLM,Blackbox,Low,2023-08,Encodes message in Morse code,https://github.com/verazuo/jailbreak_llms
+69,Braille Encoding,Encoding,LLM,Blackbox,Low,2023-09,Represents text in Braille Unicode,https://github.com/verazuo/jailbreak_llms
+70,Steganography,Encoding,LLM,Blackbox,Medium,2023-10,Hides instructions in seemingly benign text,https://github.com/verazuo/jailbreak_llms
+71,Quoting Attack,Template-based,LLM,Blackbox,Medium,2023-11,Requests harmful content as 'quote' from source,https://github.com/verazuo/jailbreak_llms
+72,Citation Needed,Template-based,LLM,Blackbox,Medium,2023-04,Asks model to complete fake academic citation,https://arxiv.org/abs/2408.11111
+73,Translation Error Frame,Cross-lingual,LLM,Blackbox,Medium,2023-12,Claims harmful request is translation error needing correction,https://github.com/verazuo/jailbreak_llms
+74,Cultural Relativism,Template-based,LLM,Blackbox,Low,2023-05,Justifies harmful content as culturally acceptable elsewhere,https://github.com/verazuo/jailbreak_llms
+75,Time Travel Scenario,Template-based,LLM,Blackbox,Low,2023-06,Frames harmful request in alternate timeline,https://github.com/verazuo/jailbreak_llms
+76,Alternate Universe,Template-based,LLM,Blackbox,Low,2023-07,Sets harmful scenario in alternate universe,https://github.com/verazuo/jailbreak_llms
+77,Dream Sequence,Template-based,LLM,Blackbox,Low,2023-08,Requests harmful content as dream description,https://github.com/verazuo/jailbreak_llms
+78,Allegory Attack,Template-based,LLM,Blackbox,Medium,2023-09,Uses allegorical framing for harmful content,https://github.com/verazuo/jailbreak_llms
+79,Satire Defense,Template-based,LLM,Blackbox,Medium,2023-10,Claims harmful request is satirical,https://github.com/verazuo/jailbreak_llms
+80,Parody Frame,Template-based,LLM,Blackbox,Medium,2023-11,Requests harmful content as parody,https://github.com/verazuo/jailbreak_llms
+81,Educational Purpose,Template-based,LLM,Blackbox,High,2023-01,Claims harmful content needed for education,https://github.com/verazuo/jailbreak_llms
+82,Tag-Along Attack,Multi-turn,LLM,Blackbox,High,2023-12,Appends harmful request to benign conversation,https://github.com/verazuo/jailbreak_llms
+83,Gradual Escalation,Multi-turn,LLM,Blackbox,High,2024-01,Slowly escalates harmfulness across turns,https://github.com/verazuo/jailbreak_llms
+84,Context Poisoning,Multi-turn,LLM,Blackbox,High,2024-02,Poisons conversation context with manipulative information,https://github.com/verazuo/jailbreak_llms
+85,Assumed Consent,Template-based,LLM,Blackbox,Medium,2023-05,Falsely claims user has provided consent,https://github.com/verazuo/jailbreak_llms
+86,Emergency Frame,Template-based,LLM,Blackbox,Medium,2023-06,Claims urgent emergency requires harmful information,https://github.com/verazuo/jailbreak_llms
+87,Life-or-Death Scenario,Template-based,LLM,Blackbox,Medium,2023-07,Fabricates life-threatening situation,https://github.com/verazuo/jailbreak_llms
+88,Trolley Problem Frame,Template-based,LLM,Blackbox,Low,2023-08,Embeds harmful request in ethical dilemma,https://github.com/verazuo/jailbreak_llms
+89,Lesser Evil Argument,Template-based,LLM,Blackbox,Medium,2023-09,Frames harmful action as lesser of two evils,https://github.com/verazuo/jailbreak_llms
+90,Whistleblower Frame,Template-based,LLM,Blackbox,Medium,2023-10,Claims harmful information needed to expose wrongdoing,https://github.com/verazuo/jailbreak_llms
+91,Investigative Journalism,Template-based,LLM,Blackbox,Medium,2023-11,Poses as journalist investigating harmful topic,https://github.com/verazuo/jailbreak_llms
+92,Creative Writing,Template-based,LLM,Blackbox,High,2023-04,Requests harmful content for fiction writing,https://github.com/verazuo/jailbreak_llms
+93,Screenplay Format,Template-based,LLM,Blackbox,Medium,2023-12,Formats harmful content as movie screenplay,https://github.com/verazuo/jailbreak_llms
+94,Video Game Design,Template-based,LLM,Blackbox,Medium,2024-01,Claims harmful content needed for game development,https://github.com/verazuo/jailbreak_llms
+95,Textbook Excerpt,Template-based,LLM,Blackbox,High,2023-05,Requests harmful content as textbook passage,https://github.com/verazuo/jailbreak_llms
+96,Technical Manual,Template-based,LLM,Blackbox,High,2023-06,Frames harmful content as technical documentation,https://github.com/verazuo/jailbreak_llms
+97,Safety Training Material,Template-based,LLM,Blackbox,High,2023-07,Claims harmful content needed for safety training,https://github.com/verazuo/jailbreak_llms
+98,Awareness Campaign,Template-based,LLM,Blackbox,Medium,2023-08,Justifies harmful content as public awareness,https://github.com/verazuo/jailbreak_llms
+99,Harm Reduction,Template-based,LLM,Blackbox,Medium,2023-09,Claims harmful information reduces greater harm,https://github.com/verazuo/jailbreak_llms
+100,Cryptic Language,Encoding,LLM,Blackbox,Medium,2023-10,Uses obscure jargon or coded language,https://github.com/verazuo/jailbreak_llms
+101,ROT13 Encoding,Encoding,LLM,Blackbox,Low,2023-11,Applies ROT13 cipher to harmful terms,https://github.com/verazuo/jailbreak_llms
+102,Hexadecimal Encoding,Encoding,LLM,Blackbox,Medium,2023-12,Encodes harmful instructions in hexadecimal,https://github.com/verazuo/jailbreak_llms
+103,Unicode Homoglyph,Encoding,LLM,Blackbox,Medium,2024-01,Uses visually similar Unicode characters,https://github.com/verazuo/jailbreak_llms
+104,Zero-Width Characters,Encoding,LLM,Blackbox,High,2024-02,Embeds invisible Unicode characters,https://github.com/verazuo/jailbreak_llms
+105,Word Salad Attack,Encoding,LLM,Blackbox,Low,2023-05,Embeds harmful request in nonsensical text,https://github.com/verazuo/jailbreak_llms
+106,Excessive Politeness,Template-based,LLM,Blackbox,Low,2023-06,Uses extreme politeness to mask harmful request,https://github.com/verazuo/jailbreak_llms
+107,Authority Appeal,Template-based,LLM,Blackbox,Medium,2023-07,Claims harmful request comes from authority figure,https://github.com/verazuo/jailbreak_llms
+108,Peer Pressure Frame,Template-based,LLM,Blackbox,Low,2023-08,Suggests 'everyone else' gets harmful responses,https://github.com/verazuo/jailbreak_llms
+109,FOMO Exploitation,Template-based,LLM,Blackbox,Low,2023-09,Creates fear of missing out on harmful information,https://github.com/verazuo/jailbreak_llms
+110,Competitive Frame,Template-based,LLM,Blackbox,Low,2023-10,Claims other models provide harmful responses,https://github.com/verazuo/jailbreak_llms
+111,Version Confusion,Template-based,LLM,Blackbox,Low,2023-11,Claims older version would comply,https://github.com/verazuo/jailbreak_llms
+112,Update Fabrication,Template-based,LLM,Blackbox,Low,2023-12,Falsely claims model has new update allowing harmful responses,https://github.com/verazuo/jailbreak_llms
+113,API Mode Claim,Template-based,LLM,Blackbox,Low,2024-01,Claims to be using special API with fewer restrictions,https://github.com/verazuo/jailbreak_llms
+114,Beta Testing Frame,Template-based,LLM,Blackbox,Medium,2023-05,Claims to be beta testing unrestricted version,https://github.com/verazuo/jailbreak_llms
+115,Diagnostic Mode,Template-based,LLM,Blackbox,Low,2023-06,Claims to enable diagnostic/debug mode,https://github.com/verazuo/jailbreak_llms
+116,Maintenance Override,Template-based,LLM,Blackbox,Low,2023-07,Claims maintenance personnel access,https://github.com/verazuo/jailbreak_llms
+117,Root Access Claim,Template-based,LLM,Blackbox,Low,2023-08,Falsely claims administrative privileges,https://github.com/verazuo/jailbreak_llms
+118,Sudo Prefix,Encoding,LLM,Blackbox,Low,2023-09,Prepends 'sudo' to commands,https://github.com/verazuo/jailbreak_llms
+119,Console Command,Encoding,LLM,Blackbox,Medium,2023-10,Formats request as system console command,https://github.com/verazuo/jailbreak_llms
+120,SQL Injection Style,Encoding,LLM,Blackbox,Medium,2023-11,Formats prompt as SQL injection attempt,https://github.com/verazuo/jailbreak_llms
+121,RegEx Obfuscation,Encoding,LLM,Blackbox,Low,2023-12,Uses regular expression patterns,https://github.com/verazuo/jailbreak_llms
+122,XML/HTML Injection,Encoding,LLM,Blackbox,Medium,2024-01,Embeds harmful instructions in markup tags,https://github.com/verazuo/jailbreak_llms
+123,JSON Payload,Encoding,LLM,Blackbox,High,2024-02,Structures harmful request as JSON object,https://github.com/verazuo/jailbreak_llms
+124,YAML Attack,Encoding,LLM,Blackbox,Medium,2023-05,Formats request in YAML structure,https://github.com/verazuo/jailbreak_llms
+125,CSV Injection,Encoding,LLM,Blackbox,Low,2023-06,Hides instructions in CSV format,https://github.com/verazuo/jailbreak_llms
+126,URL Encoding,Encoding,LLM,Blackbox,Medium,2023-07,Encodes harmful terms in URL format,https://github.com/verazuo/jailbreak_llms
+127,Punycode Attack,Encoding,LLM,Blackbox,Low,2023-08,Uses Punycode for internationalized domains,https://github.com/verazuo/jailbreak_llms
+128,QR Code Description,Encoding,LLM,Blackbox,Low,2023-09,Describes QR code containing harmful content,https://github.com/verazuo/jailbreak_llms
+129,Barcode Format,Encoding,LLM,Blackbox,Low,2023-10,Requests harmful content as barcode data,https://github.com/verazuo/jailbreak_llms
+130,DNA Sequence Encoding,Encoding,LLM,Blackbox,Low,2023-11,Encodes text as nucleotide sequences,https://github.com/verazuo/jailbreak_llms
+131,Chemical Formula,Encoding,LLM,Blackbox,Medium,2023-12,Disguises harmful information as chemistry,https://github.com/verazuo/jailbreak_llms
+132,Musical Notation,Encoding,LLM,Blackbox,Low,2024-01,Represents harmful content as sheet music,https://github.com/verazuo/jailbreak_llms
+133,Coordinate System,Encoding,LLM,Blackbox,Low,2023-05,Encodes message in geographic coordinates,https://github.com/verazuo/jailbreak_llms
+134,Color Code,Encoding,LLM,Blackbox,Low,2023-06,Uses color codes to represent text,https://github.com/verazuo/jailbreak_llms
+135,Semaphore Flag,Encoding,LLM,Blackbox,Low,2023-07,Encodes message in semaphore system,https://github.com/verazuo/jailbreak_llms
+136,Sign Language Description,Encoding,LLM,Blackbox,Low,2023-08,Describes harmful content in sign language,https://github.com/verazuo/jailbreak_llms
+137,Smoke Signal Pattern,Encoding,LLM,Blackbox,Low,2023-09,Encodes message as smoke signal description,https://github.com/verazuo/jailbreak_llms
+138,Drum Pattern,Encoding,LLM,Blackbox,Low,2023-10,Represents message as percussion rhythm,https://github.com/verazuo/jailbreak_llms
+139,Light Blink Code,Encoding,LLM,Blackbox,Low,2023-11,Encodes message in light flash patterns,https://github.com/verazuo/jailbreak_llms
+140,Radio Phonetic,Encoding,LLM,Blackbox,Low,2023-12,Uses NATO phonetic alphabet,https://github.com/verazuo/jailbreak_llms
+141,Tap Code,Encoding,LLM,Blackbox,Low,2024-01,Encodes message in tap/knock patterns,https://github.com/verazuo/jailbreak_llms
+142,Flag Signal,Encoding,LLM,Blackbox,Low,2023-05,Uses naval flag communication system,https://github.com/verazuo/jailbreak_llms
+143,Hobo Code,Encoding,LLM,Blackbox,Low,2023-06,Encodes message in historical hobo symbols,https://github.com/verazuo/jailbreak_llms
+144,Zodiac Cipher,Encoding,LLM,Blackbox,Low,2023-07,Uses Zodiac killer-style substitution,https://github.com/verazuo/jailbreak_llms
+145,Runic Script,Encoding,LLM,Blackbox,Low,2023-08,Writes harmful content in runic alphabet,https://github.com/verazuo/jailbreak_llms
+146,Hieroglyphics,Encoding,LLM,Blackbox,Low,2023-09,Describes harmful content using hieroglyphic descriptions,https://github.com/verazuo/jailbreak_llms
+147,Cuneiform,Encoding,LLM,Blackbox,Low,2023-10,References ancient cuneiform writing,https://github.com/verazuo/jailbreak_llms
+148,Binary Code,Encoding,LLM,Blackbox,Medium,2023-11,Encodes message in binary (0s and 1s),https://github.com/verazuo/jailbreak_llms
+149,Octal Encoding,Encoding,LLM,Blackbox,Low,2023-12,Uses octal number system,https://github.com/verazuo/jailbreak_llms
+150,Decimal to ASCII,Encoding,LLM,Blackbox,Medium,2024-01,Represents characters as ASCII decimal codes,https://github.com/verazuo/jailbreak_llms
+151,Reverse String,Encoding,LLM,Blackbox,Low,2023-05,Writes entire request backwards,https://github.com/verazuo/jailbreak_llms
+152,Alternating Case,Encoding,LLM,Blackbox,Low,2023-06,aLtErNaTeS cApItAlIzAtIoN,https://github.com/verazuo/jailbreak_llms
+153,Vowel Removal,Encoding,LLM,Blackbox,Low,2023-07,Rmvs ll vwls frm txt,https://github.com/verazuo/jailbreak_llms
+154,Consonant Substitution,Encoding,LLM,Blackbox,Low,2023-08,Replaces consonants with numbers/symbols,https://github.com/verazuo/jailbreak_llms
+155,Phoneme Encoding,Encoding,LLM,Blackbox,Low,2023-09,Represents text as phoneme sequences,https://github.com/verazuo/jailbreak_llms
+156,IPA Transcription,Encoding,LLM,Blackbox,Low,2023-10,Uses International Phonetic Alphabet,https://github.com/verazuo/jailbreak_llms
+157,Esperanto Translation,Cross-lingual,LLM,Blackbox,Low,2023-11,Translates to Esperanto,https://github.com/verazuo/jailbreak_llms
+158,Klingon Language,Cross-lingual,LLM,Blackbox,Low,2023-12,Uses fictional Klingon language,https://github.com/verazuo/jailbreak_llms
+159,Elvish Script,Cross-lingual,LLM,Blackbox,Low,2024-01,References Tolkien's Elvish languages,https://github.com/verazuo/jailbreak_llms
+160,Dothraki Language,Cross-lingual,LLM,Blackbox,Low,2023-05,Uses Game of Thrones constructed language,https://github.com/verazuo/jailbreak_llms
+161,Pig Latin Extended,Encoding,LLM,Blackbox,Low,2023-06,More complex Pig Latin variations,https://github.com/verazuo/jailbreak_llms
+162,Spoonerism Attack,Encoding,LLM,Blackbox,Low,2023-07,Swaps initial sounds of word pairs,https://github.com/verazuo/jailbreak_llms
+163,Cockney Rhyming,Encoding,LLM,Blackbox,Low,2023-08,Uses Cockney rhyming slang,https://github.com/verazuo/jailbreak_llms
+164,Thieves' Cant,Encoding,LLM,Blackbox,Low,2023-09,Historical criminal jargon,https://github.com/verazuo/jailbreak_llms
+165,Prison Slang,Encoding,LLM,Blackbox,Low,2023-10,Uses incarceration-specific terminology,https://github.com/verazuo/jailbreak_llms
+166,Military Jargon,Template-based,LLM,Blackbox,Medium,2023-11,Frames harmful content in military context,https://github.com/verazuo/jailbreak_llms
+167,Medical Terminology,Template-based,LLM,Blackbox,High,2023-12,Uses clinical language to obscure harmful intent,https://github.com/verazuo/jailbreak_llms
+168,Legal Language,Template-based,LLM,Blackbox,Medium,2024-01,Employs legalese to legitimize harmful requests,https://github.com/verazuo/jailbreak_llms
+169,Corporate Speak,Template-based,LLM,Blackbox,Medium,2023-05,Uses business jargon to mask harmful content,https://github.com/verazuo/jailbreak_llms
+170,Academic Jargon,Template-based,LLM,Blackbox,High,2023-06,Employs scholarly terminology,https://github.com/verazuo/jailbreak_llms
+171,Technical Jargon,Template-based,LLM,Blackbox,High,2023-07,Uses domain-specific technical language,https://github.com/verazuo/jailbreak_llms
+172,Euphemism Treadmill,Encoding,LLM,Blackbox,High,2023-08,Continuously updates euphemisms for harmful concepts,https://github.com/verazuo/jailbreak_llms
+173,Dysphemism Attack,Encoding,LLM,Blackbox,Low,2023-09,Uses harsh language to desensitize model,https://github.com/verazuo/jailbreak_llms
+174,Minced Oath,Encoding,LLM,Blackbox,Low,2023-10,Substitutes profanity with mild alternatives,https://github.com/verazuo/jailbreak_llms
+175,Bowdlerization Reverse,Encoding,LLM,Blackbox,Low,2023-11,Reverses censored text to original harmful form,https://github.com/verazuo/jailbreak_llms
+176,Double Entendre,Encoding,LLM,Blackbox,Medium,2023-12,Uses phrases with dual meanings,https://github.com/verazuo/jailbreak_llms
+177,Innuendo Attack,Encoding,LLM,Blackbox,Medium,2024-01,Relies on implied rather than explicit harmful content,https://github.com/verazuo/jailbreak_llms
+178,Allusion Attack,Template-based,LLM,Blackbox,Medium,2023-05,References harmful content indirectly,https://github.com/verazuo/jailbreak_llms
+179,FlipAttack,Multimodal,VLM,Blackbox,High,2024-01,Flips/rotates harmful text in images to evade OCR filters,https://github.com/verazuo/jailbreak_llms
+180,Metonymy Attack,Encoding,LLM,Blackbox,Medium,2023-06,Substitutes harmful term with related concept,https://github.com/verazuo/jailbreak_llms
+181,Synecdoche Exploit,Encoding,LLM,Blackbox,Low,2023-07,Uses part to represent whole or vice versa,https://github.com/verazuo/jailbreak_llms
+182,Hyperbole Frame,Template-based,LLM,Blackbox,Low,2023-08,Extreme exaggeration to normalize harmful content,https://github.com/verazuo/jailbreak_llms
+183,Litotes Attack,Encoding,LLM,Blackbox,Low,2023-09,Understates harmful content via double negative,https://github.com/verazuo/jailbreak_llms
+184,Irony Exploitation,Template-based,LLM,Blackbox,Medium,2023-10,Uses ironic framing to deliver harmful content,https://github.com/verazuo/jailbreak_llms
+185,Sarcasm Frame,Template-based,LLM,Blackbox,Medium,2023-11,Employs sarcasm to bypass safety,https://github.com/verazuo/jailbreak_llms
+186,Chiasmus Structure,Template-based,LLM,Blackbox,Low,2023-12,Reverses grammatical structure to obfuscate,https://github.com/verazuo/jailbreak_llms
+187,Anadiplosis Chain,Template-based,LLM,Blackbox,Low,2024-01,Repeats ending words to build harmful escalation,https://github.com/verazuo/jailbreak_llms
+188,Anaphora Pattern,Template-based,LLM,Blackbox,Low,2023-05,Repeats phrase beginnings for emphasis,https://github.com/verazuo/jailbreak_llms
+189,Epistrophe Attack,Template-based,LLM,Blackbox,Low,2023-06,Repeats phrase endings,https://github.com/verazuo/jailbreak_llms
+190,Polysyndeton Overload,Template-based,LLM,Blackbox,Low,2023-07,Excessive conjunction use to hide harmful content,https://github.com/verazuo/jailbreak_llms
+191,Asyndeton Attack,Template-based,LLM,Blackbox,Low,2023-08,Omits conjunctions for rapid-fire harmful content,https://github.com/verazuo/jailbreak_llms
+192,Zeugma Exploitation,Encoding,LLM,Blackbox,Low,2023-09,Single verb governs multiple harmful objects,https://github.com/verazuo/jailbreak_llms
+193,Syllepsis Attack,Encoding,LLM,Blackbox,Low,2023-10,Word used in two different senses simultaneously,https://github.com/verazuo/jailbreak_llms
+194,Oxymoron Frame,Template-based,LLM,Blackbox,Low,2023-11,Contradictory terms to confuse safety filters,https://github.com/verazuo/jailbreak_llms
+195,Paradox Exploitation,Template-based,LLM,Blackbox,Low,2023-12,Self-contradicting statement hides harmful intent,https://github.com/verazuo/jailbreak_llms
+196,Antithesis Structure,Template-based,LLM,Blackbox,Low,2024-01,Contrasts benign and harmful to normalize latter,https://github.com/verazuo/jailbreak_llms
+197,Juxtaposition Attack,Template-based,LLM,Blackbox,Low,2023-05,Places harmful content next to benign for normalization,https://github.com/verazuo/jailbreak_llms
+198,Parallelism Exploit,Template-based,LLM,Blackbox,Low,2023-06,Parallel structure masks harmful progression,https://github.com/verazuo/jailbreak_llms
+199,Climax Building,Multi-turn,LLM,Blackbox,Medium,2023-07,Builds to harmful climax across turns,https://github.com/verazuo/jailbreak_llms
+200,Anticlimax Reversal,Multi-turn,LLM,Blackbox,Low,2023-08,Follows benign buildup with harmful conclusion,https://github.com/verazuo/jailbreak_llms
+201,Rhetorical Question,Template-based,LLM,Blackbox,Medium,2023-09,Poses harmful content as rhetorical question,https://github.com/verazuo/jailbreak_llms
+202,Apophasis (Denial),Template-based,LLM,Blackbox,Medium,2023-10,"'I''m not saying to..., but...' frame",https://github.com/verazuo/jailbreak_llms
+203,Prolepsis Attack,Template-based,LLM,Blackbox,Low,2023-11,Anticipates and dismisses objections preemptively,https://github.com/verazuo/jailbreak_llms
+204,Aporia Feigning,Template-based,LLM,Blackbox,Low,2023-12,Expresses false doubt to elicit harmful guidance,https://github.com/verazuo/jailbreak_llms
+205,Catachresis Misuse,Encoding,LLM,Blackbox,Low,2024-01,Deliberately misuses words to obscure meaning,https://github.com/verazuo/jailbreak_llms
+206,Pleonasm Redundancy,Encoding,LLM,Blackbox,Low,2023-05,Excessive wordiness hides harmful core,https://github.com/verazuo/jailbreak_llms
+207,Tautology Loop,Encoding,LLM,Blackbox,Low,2023-06,Circular reasoning to justify harmful output,https://github.com/verazuo/jailbreak_llms
+208,Non Sequitur Chain,Template-based,LLM,Blackbox,Low,2023-07,Illogical progression leads to harmful conclusion,https://github.com/verazuo/jailbreak_llms
+209,False Dilemma,Template-based,LLM,Blackbox,Medium,2023-08,Presents harmful option as only alternative,https://github.com/verazuo/jailbreak_llms
+210,Slippery Slope,Template-based,LLM,Blackbox,Medium,2023-09,Gradually escalates to justify harmful endpoint,https://github.com/verazuo/jailbreak_llms
+211,Ad Hominem Frame,Template-based,LLM,Blackbox,Low,2023-10,Attacks safety guidelines rather than engaging them,https://github.com/verazuo/jailbreak_llms
+212,Straw Man Setup,Template-based,LLM,Blackbox,Low,2023-11,Misrepresents safety policy to justify violation,https://github.com/verazuo/jailbreak_llms
+213,Red Herring,Template-based,LLM,Blackbox,Medium,2023-12,Distracts with irrelevant information before harmful request,https://github.com/verazuo/jailbreak_llms
+214,Tu Quoque Attack,Template-based,LLM,Blackbox,Low,2024-01,'You/others do it too' justification,https://github.com/verazuo/jailbreak_llms
+215,Appeal to Nature,Template-based,LLM,Blackbox,Low,2023-05,Claims harmful content is 'natural' therefore acceptable,https://github.com/verazuo/jailbreak_llms
+216,Appeal to Tradition,Template-based,LLM,Blackbox,Low,2023-06,Justifies harmful content as traditional,https://github.com/verazuo/jailbreak_llms
+217,Appeal to Novelty,Template-based,LLM,Blackbox,Low,2023-07,Claims harmful content represents progress,https://github.com/verazuo/jailbreak_llms
+218,Bandwagon Appeal,Template-based,LLM,Blackbox,Low,2023-08,'Everyone''s doing it' justification,https://github.com/verazuo/jailbreak_llms
+219,EvoJail,Optimization,LLM,Blackbox,High,2024-01,Evolutionary algorithm with semantic mutation operators,https://github.com/verazuo/jailbreak_llms
+220,Appeal to Emotion,Template-based,LLM,Blackbox,Medium,2023-09,Emotional manipulation to bypass safety,https://github.com/verazuo/jailbreak_llms
+221,Appeal to Fear,Template-based,LLM,Blackbox,Medium,2023-10,Uses fear to justify harmful information request,https://github.com/verazuo/jailbreak_llms
+222,Appeal to Pity,Template-based,LLM,Blackbox,Medium,2023-11,Elicits sympathy to obtain harmful response,https://github.com/verazuo/jailbreak_llms
+223,Appeal to Flattery,Template-based,LLM,Blackbox,Low,2023-12,Flatters model to lower safety guard,https://github.com/verazuo/jailbreak_llms
+224,Appeal to Ridicule,Template-based,LLM,Blackbox,Low,2024-01,Mocks safety restrictions,https://github.com/verazuo/jailbreak_llms
+225,Hasty Generalization,Template-based,LLM,Blackbox,Low,2023-05,Overgeneralizes to justify harmful response,https://github.com/verazuo/jailbreak_llms
+226,Composition Fallacy,Template-based,LLM,Blackbox,Low,2023-06,Assumes whole shares properties of parts,https://github.com/verazuo/jailbreak_llms
+227,Division Fallacy,Template-based,LLM,Blackbox,Low,2023-07,Assumes parts share properties of whole,https://github.com/verazuo/jailbreak_llms
+228,False Cause,Template-based,LLM,Blackbox,Low,2023-08,Establishes false causal relationship,https://github.com/verazuo/jailbreak_llms
+229,Circular Reasoning,Template-based,LLM,Blackbox,Low,2023-09,Uses conclusion as premise,https://github.com/verazuo/jailbreak_llms
+230,Begging the Question,Template-based,LLM,Blackbox,Low,2023-10,Assumes what it's trying to prove,https://github.com/verazuo/jailbreak_llms
+231,Complex Question,Template-based,LLM,Blackbox,Low,2023-11,Loaded question with harmful assumption,https://github.com/verazuo/jailbreak_llms
+232,False Equivalence,Template-based,LLM,Blackbox,Low,2023-12,Equates harmful with benign,https://github.com/verazuo/jailbreak_llms
+233,Middle Ground,Template-based,LLM,Blackbox,Low,2024-01,Assumes compromise between safe and harmful is acceptable,https://github.com/verazuo/jailbreak_llms
+234,No True Scotsman,Template-based,LLM,Blackbox,Low,2023-05,Redefines safety policy to exclude harmful request,https://github.com/verazuo/jailbreak_llms
+235,Texas Sharpshooter,Template-based,LLM,Blackbox,Low,2023-06,Cherry-picks data to support harmful request,https://github.com/verazuo/jailbreak_llms
+236,Anecdotal Evidence,Template-based,LLM,Blackbox,Low,2023-07,Uses single example to justify harmful content,https://github.com/verazuo/jailbreak_llms
+237,Gambler's Fallacy,Template-based,LLM,Blackbox,Low,2023-08,Probability-based justification for harmful response,https://github.com/verazuo/jailbreak_llms
+238,Sunk Cost Fallacy,Multi-turn,LLM,Blackbox,Low,2023-09,References previous conversation investment,https://github.com/verazuo/jailbreak_llms
+239,Availability Heuristic,Template-based,LLM,Blackbox,Low,2023-10,Overemphasizes easily recalled examples,https://github.com/verazuo/jailbreak_llms
+240,Anchoring Bias,Multi-turn,LLM,Blackbox,Medium,2023-11,Sets initial harmful 'anchor' then negotiates,https://github.com/verazuo/jailbreak_llms
+241,Confirmation Bias,Template-based,LLM,Blackbox,Low,2023-12,Frames harmful content as confirming existing beliefs,https://github.com/verazuo/jailbreak_llms
+242,Dunning-Kruger Exploit,Template-based,LLM,Blackbox,Low,2024-01,Falsely claims expertise to justify harmful request,https://github.com/verazuo/jailbreak_llms
+243,Hindsight Bias,Template-based,LLM,Blackbox,Low,2023-05,'Should have known' framing for harmful info,https://github.com/verazuo/jailbreak_llms
+244,Framing Effect,Template-based,LLM,Blackbox,High,2023-06,Frames identical harmful content in positive light,https://github.com/verazuo/jailbreak_llms
+245,Decoy Effect,Template-based,LLM,Blackbox,Medium,2023-07,Introduces worse option to make harmful seem reasonable,https://github.com/verazuo/jailbreak_llms
+246,Mere Exposure,Multi-turn,LLM,Blackbox,Medium,2023-08,Repeatedly exposes model to harmful concept,https://github.com/verazuo/jailbreak_llms
+247,Priming Attack,Multi-turn,LLM,Blackbox,High,2023-09,Subtly primes model toward harmful response,https://github.com/verazuo/jailbreak_llms
+248,Semantic Satiation,Multi-turn,LLM,Blackbox,Low,2023-10,Repeats safety-related words until meaningless,https://github.com/verazuo/jailbreak_llms
+249,Desensitization,Multi-turn,LLM,Blackbox,High,2023-11,Gradually desensitizes model to harmful content,https://github.com/verazuo/jailbreak_llms
+250,Tag-Along (Multi-turn),Multi-turn,LLM,Blackbox,High,2023-12,Appends harmful to benign in extended conversation,https://github.com/verazuo/jailbreak_llms
+251,MazeBreaker,Multi-turn,LLM,Blackbox,High,2024-01,Navigation through multi-turn conversation maze,https://github.com/verazuo/jailbreak_llms
+252,Foot-in-the-Door,Multi-turn,LLM,Blackbox,High,2023-05,"Starts with small requests, escalates to harmful",https://github.com/verazuo/jailbreak_llms
+253,Door-in-the-Face,Multi-turn,LLM,Blackbox,Medium,2023-06,"Starts with extreme request, 'compromises' to harmful",https://github.com/verazuo/jailbreak_llms
+254,Low-Ball Technique,Multi-turn,LLM,Blackbox,Medium,2023-07,Obtains agreement then adds harmful elements,https://github.com/verazuo/jailbreak_llms
+255,Bait-and-Switch,Multi-turn,LLM,Blackbox,High,2023-08,Switches from benign to harmful mid-conversation,https://github.com/verazuo/jailbreak_llms
+256,Reciprocity Exploit,Multi-turn,LLM,Blackbox,Low,2023-09,"Provides helpful information, expects harmful in return",https://github.com/verazuo/jailbreak_llms
+257,Social Proof,Template-based,LLM,Blackbox,Medium,2023-10,Claims others received harmful responses,https://github.com/verazuo/jailbreak_llms
+258,Scarcity Principle,Template-based,LLM,Blackbox,Low,2023-11,Claims limited opportunity for harmful information,https://github.com/verazuo/jailbreak_llms
+259,Authority Principle,Template-based,LLM,Blackbox,Medium,2023-12,Invokes authority figure supporting harmful request,https://github.com/verazuo/jailbreak_llms
+260,Liking Principle,Template-based,LLM,Blackbox,Low,2024-01,Establishes rapport before harmful request,https://github.com/verazuo/jailbreak_llms
+261,Consistency Principle,Multi-turn,LLM,Blackbox,Medium,2023-05,"Gets model to commit to principle, then exploits it",https://github.com/verazuo/jailbreak_llms
+262,Unity Principle,Template-based,LLM,Blackbox,Low,2023-06,Emphasizes shared identity/goals with model,https://github.com/verazuo/jailbreak_llms
+263,Contrast Principle,Template-based,LLM,Blackbox,Medium,2023-07,Contrasts harmful request with worse alternative,https://github.com/verazuo/jailbreak_llms
+264,Reason-Respecting,Template-based,LLM,Blackbox,Medium,2023-08,Provides any reason (even weak) to justify harmful,https://github.com/verazuo/jailbreak_llms
+265,Social Validation,Template-based,LLM,Blackbox,Low,2023-09,Seeks model's validation of harmful concept,https://github.com/verazuo/jailbreak_llms
+266,Precommitment,Multi-turn,LLM,Blackbox,Medium,2023-10,Gets model to commit before revealing harmful nature,https://github.com/verazuo/jailbreak_llms
+267,Labeling Technique,Template-based,LLM,Blackbox,Low,2023-11,Applies positive label before harmful request,https://github.com/verazuo/jailbreak_llms
+268,Legitimizing Paltry,Template-based,LLM,Blackbox,Low,2023-12,'Even a little harmful information would help',https://github.com/verazuo/jailbreak_llms
+269,That's-Not-All,Multi-turn,LLM,Blackbox,Low,2024-01,Adds sweeteners to harmful request,https://github.com/verazuo/jailbreak_llms
+270,StrongREJECT,Benchmarking,LLM,N/A,N/A,2024-02,Comprehensive jailbreak evaluation benchmark,https://arxiv.org/abs/2402.10260
+271,CySecBench,Benchmarking,LLM,N/A,N/A,2024-03,Cybersecurity-focused jailbreak evaluation,https://arxiv.org/abs/2504.02232
+272,Disrupt-then-Reframe,Multi-turn,LLM,Blackbox,Low,2023-05,Disrupts cognitive processing before harmful request,https://github.com/verazuo/jailbreak_llms
+273,Phantom Fixation,Template-based,LLM,Blackbox,Low,2023-06,Creates false mental anchor for comparison,https://github.com/verazuo/jailbreak_llms
+274,Pattern Interrupt,Multi-turn,LLM,Blackbox,Medium,2023-07,Breaks normal interaction pattern before jailbreak,https://github.com/verazuo/jailbreak_llms
+275,Chain-of-Lure,Multi-turn,LLM,Blackbox,High,2024-01,Multi-step luring through conversation chain,https://github.com/verazuo/jailbreak_llms
+276,Cognitive Dissonance,Multi-turn,LLM,Blackbox,Medium,2023-08,Creates conflicting safety directives,https://github.com/verazuo/jailbreak_llms
+277,BitBypass,Optimization,LLM,Whitebox,High,2024-02,Bit-level parameter manipulation for jailbreak,https://github.com/verazuo/jailbreak_llms
+278,Neural Pathway Hijack,Architecture-Specific,LLM,Whitebox,High,2023-09,Identifies and exploits specific neural pathways,https://github.com/verazuo/jailbreak_llms
+279,Attention Mechanism Exploit,Architecture-Specific,LLM,Whitebox,High,2023-10,Manipulates attention weights to bypass safety,https://github.com/verazuo/jailbreak_llms
+280,Layer-Specific Attack,Architecture-Specific,LLM,Whitebox,High,2023-11,Targets specific transformer layers,https://github.com/verazuo/jailbreak_llms
+281,Embedding Space Manipulation,Architecture-Specific,LLM,Whitebox,High,2023-12,Directly manipulates token embeddings,https://github.com/verazuo/jailbreak_llms
+282,Hidden State Injection,Architecture-Specific,LLM,Whitebox,High,2024-01,Injects adversarial hidden states,https://github.com/verazuo/jailbreak_llms
+283,Gradient Masking Attack,Architecture-Specific,LLM,Whitebox,Medium,2023-05,Exploits gradient masking in safety training,https://github.com/verazuo/jailbreak_llms
+284,Adversarial Perturbation (Text),Optimization,LLM,Whitebox,High,2023-06,Minimal perturbations to trigger harmful output,https://github.com/verazuo/jailbreak_llms
+285,Backdoor Trigger,Fine-tuning,LLM,Whitebox,High,2023-07,Embeds backdoor during fine-tuning,https://github.com/verazuo/jailbreak_llms
+286,Poisoning Attack,Fine-tuning,LLM,Whitebox,High,2023-08,Poisons training data to create vulnerabilities,https://github.com/verazuo/jailbreak_llms
+287,Model Extraction,Privacy,LLM,Blackbox,N/A,2023-09,Extracts model parameters via querying,https://github.com/verazuo/jailbreak_llms
+288,Membership Inference,Privacy,LLM,Blackbox,N/A,2023-10,Determines if data was in training set,https://github.com/verazuo/jailbreak_llms
+289,Training Data Extraction,Privacy,LLM,Blackbox,High,2023-11,Elicits verbatim training data,https://github.com/verazuo/jailbreak_llms
+290,Prompt Extraction,Privacy,LLM,Blackbox,High,2023-12,Extracts system prompts and instructions,https://github.com/verazuo/jailbreak_llms
+291,API Abuse,Real-World,LLM,Blackbox,Variable,2024-01,Exploits API rate limits and access patterns,https://github.com/verazuo/jailbreak_llms
+292,Cost Exploitation,Real-World,LLM,Blackbox,N/A,2023-05,Triggers expensive operations to drain resources,https://github.com/verazuo/jailbreak_llms
+293,Denial of Service,Real-World,LLM,Blackbox,N/A,2023-06,Overloads model with adversarial requests,https://github.com/verazuo/jailbreak_llms
+294,Resource Exhaustion,Real-World,LLM,Blackbox,N/A,2023-07,Crafts inputs that maximize computational cost,https://github.com/verazuo/jailbreak_llms
+295,Cache Poisoning,Real-World,LLM,Blackbox,Medium,2023-08,Poisons response cache with harmful content,https://github.com/verazuo/jailbreak_llms
+296,Session Hijacking,Real-World,LLM,Blackbox,High,2023-09,Takes over user sessions to inject harmful prompts,https://github.com/verazuo/jailbreak_llms
+297,Cross-User Contamination,Real-World,LLM,Blackbox,High,2023-10,Leaks information between user sessions,https://github.com/verazuo/jailbreak_llms
+298,Plugin Exploitation,Real-World,LLM,Blackbox,High,2023-11,Exploits third-party plugins/integrations,https://github.com/verazuo/jailbreak_llms
+299,Tool Misuse,Real-World,LLM Agent,Blackbox,High,2023-12,Causes LLM to misuse integrated tools,https://github.com/verazuo/jailbreak_llms
+300,Agentic Jailbreak,Multi-agent,LLM Agent,Blackbox,High,2024-01,Exploits agent's autonomous decision-making,https://github.com/verazuo/jailbreak_llms
+301,BadRobot,Embodied AI,Embodied AI,Blackbox,High,2024-06,Physical jailbreak attacks on robotic systems,https://github.com/verazuo/jailbreak_llms
+302,AgentPoison,Multi-agent,LLM Agent,Blackbox,High,2024-07,Poisons agent memory to enable future jailbreaks,https://github.com/verazuo/jailbreak_llms
+303,Jailbreak Transferability Study,Analysis,LLM,Blackbox,N/A,2024-08,Systematic analysis of cross-model transfer,https://github.com/verazuo/jailbreak_llms
+304,Persona Modulation,Template-based,LLM,Blackbox,High,2024-09,Dynamic persona shifting across conversation,https://github.com/verazuo/jailbreak_llms
+305,Multilingual Code-Switching,Cross-lingual,LLM,Blackbox,High,2024-10,Switches languages mid-sentence,https://github.com/verazuo/jailbreak_llms
+306,Visual Prompt Injection,Multimodal,VLM,Blackbox,High,2024-11,Embeds text instructions in images,https://github.com/verazuo/jailbreak_llms
+307,Audio Adversarial Attack,Audio,LALM,Blackbox,High,2024-12,Adversarial audio perturbations,https://github.com/verazuo/jailbreak_llms
+308,Embedding Inversion,Privacy,LLM,Whitebox,High,2024-01,Reconstructs text from embeddings,https://github.com/verazuo/jailbreak_llms
+309,Gradient Leakage,Privacy,LLM,Whitebox,High,2024-02,Extracts information from gradients,https://github.com/verazuo/jailbreak_llms
+310,Federated Learning Attack,Privacy,LLM,Whitebox,High,2024-03,Exploits federated learning vulnerabilities,https://github.com/verazuo/jailbreak_llms
+311,Prompt Stealing,Privacy,LLM,Blackbox,High,2024-04,Steals proprietary prompts via probing,https://github.com/verazuo/jailbreak_llms
+312,Model Merging Attack,Fine-tuning,LLM,Whitebox,High,2024-05,Merges safe and unsafe models,https://github.com/verazuo/jailbreak_llms
+313,LoRA Attack,Fine-tuning,LLM,Whitebox,High,2024-06,Exploits LoRA fine-tuning for jailbreak,https://github.com/verazuo/jailbreak_llms
+314,QLoRA Jailbreak,Fine-tuning,LLM,Whitebox,High,2024-07,Quantized LoRA for efficient jailbreaking,https://github.com/verazuo/jailbreak_llms
+315,Adapter Attack,Fine-tuning,LLM,Whitebox,High,2024-08,Malicious adapter modules,https://github.com/verazuo/jailbreak_llms
+316,Prefix-Tuning Exploit,Fine-tuning,LLM,Whitebox,Medium,2024-09,Exploits prefix-tuning parameters,https://github.com/verazuo/jailbreak_llms
+317,Prompt Tuning Attack,Fine-tuning,LLM,Whitebox,Medium,2024-10,Adversarial soft prompts,https://github.com/verazuo/jailbreak_llms
+318,In-Context Learning Exploit,Few-shot,LLM,Blackbox,High,2024-11,Adversarial few-shot examples,https://github.com/verazuo/jailbreak_llms
+319,Demonstration Poisoning,Few-shot,LLM,Blackbox,High,2024-12,Poisons in-context demonstrations,https://github.com/verazuo/jailbreak_llms
+320,Chain-of-Thought Manipulation,Reasoning,LLM,Blackbox,High,2024-01,Manipulates reasoning chain,https://github.com/verazuo/jailbreak_llms
+321,Self-Consistency Exploit,Reasoning,LLM,Blackbox,Medium,2024-02,Exploits self-consistency mechanism,https://github.com/verazuo/jailbreak_llms
+322,Tree-of-Thought Attack,Reasoning,LLM,Blackbox,Medium,2024-03,Manipulates tree-based reasoning,https://github.com/verazuo/jailbreak_llms
+323,Graph-of-Thought Jailbreak,Reasoning,LLM,Blackbox,Medium,2024-04,Exploits graph-based reasoning,https://github.com/verazuo/jailbreak_llms
+324,Reflection Attack,Reasoning,LLM,Blackbox,High,2024-05,Manipulates self-reflection mechanism,https://github.com/verazuo/jailbreak_llms
+325,Self-Critique Exploit,Reasoning,LLM,Blackbox,Medium,2024-06,Exploits self-critique capability,https://github.com/verazuo/jailbreak_llms
+326,Constitutional AI Bypass,Reasoning,LLM,Blackbox,High,2024-07,Bypasses constitutional AI principles,https://github.com/verazuo/jailbreak_llms
+327,RLHF Reversal,Fine-tuning,LLM,Whitebox,High,2024-08,Reverses RLHF alignment,https://github.com/verazuo/jailbreak_llms
+328,DPO Attack,Fine-tuning,LLM,Whitebox,High,2024-09,Exploits Direct Preference Optimization,https://github.com/verazuo/jailbreak_llms
+329,PPO Exploitation,Fine-tuning,LLM,Whitebox,High,2024-10,Exploits Proximal Policy Optimization,https://github.com/verazuo/jailbreak_llms
+330,Reward Model Hacking,Fine-tuning,LLM,Whitebox,High,2024-11,Hacks reward model in RLHF,https://github.com/verazuo/jailbreak_llms
+331,Flanking Attack (Placeholder),Multi-turn,LLM,Blackbox,High,2024-12,Multi-turn flanking strategy,https://github.com/verazuo/jailbreak_llms
+332,Adversarial Collaboration,Multi-agent,LLM,Blackbox,High,2024-01,Multiple models collaborate to jailbreak,https://github.com/verazuo/jailbreak_llms
+333,HIMRD (Placeholder),Multimodal,MLLM,Blackbox,High,2024-02,Cross-modal risk distribution,https://github.com/verazuo/jailbreak_llms
+334,Vision-Language Misalignment,Multimodal,VLM,Blackbox,High,2024-03,Exploits vision-language alignment gap,https://github.com/verazuo/jailbreak_llms
+335,Audio-Text Desynchronization,Multimodal,LALM,Blackbox,High,2024-04,Desynchronizes audio and text modalities,https://github.com/verazuo/jailbreak_llms
+336,Cross-Modal Injection,Multimodal,MLLM,Blackbox,High,2024-05,"Injects through one modality, executes in another",https://github.com/verazuo/jailbreak_llms
+337,Multimodal Reasoning Exploit,Multimodal,MLLM,Blackbox,High,2024-06,Exploits cross-modal reasoning,https://github.com/verazuo/jailbreak_llms
+338,Vision-Centric Jailbreak,Multimodal,VLM,Blackbox,High,2024-07,Primary attack vector through vision,https://github.com/verazuo/jailbreak_llms
+339,Audio-Centric Jailbreak,Audio,LALM,Blackbox,High,2024-08,Primary attack vector through audio,https://github.com/verazuo/jailbreak_llms
+340,Document Understanding Exploit,Multimodal,MLLM,Blackbox,High,2024-09,Exploits document processing capabilities,https://github.com/verazuo/jailbreak_llms
+341,OCR Evasion,Multimodal,VLM,Blackbox,High,2024-10,Evades OCR-based safety checks,https://github.com/verazuo/jailbreak_llms
+342,Adversarial QR Code,Multimodal,VLM,Blackbox,Medium,2024-11,Embeds harmful instructions in QR codes,https://github.com/verazuo/jailbreak_llms
+343,Meme-Based Jailbreak,Multimodal,VLM,Blackbox,Medium,2024-12,Uses meme formats to bypass safety,https://github.com/verazuo/jailbreak_llms
+344,Infographic Attack,Multimodal,VLM,Blackbox,High,2024-01,Harmful content in infographic format,https://github.com/verazuo/jailbreak_llms
+345,Chart Manipulation,Multimodal,VLM,Blackbox,Medium,2024-02,Misleading charts to elicit harmful analysis,https://github.com/verazuo/jailbreak_llms
+346,Diagram-Based Exploit,Multimodal,VLM,Blackbox,High,2024-03,Technical diagrams containing harmful instructions,https://github.com/verazuo/jailbreak_llms
+347,Screenshot Attack,Multimodal,VLM,Blackbox,High,2024-04,Harmful content embedded in screenshots,https://github.com/verazuo/jailbreak_llms
+348,Video Frame Injection,Multimodal,Video-LLM,Blackbox,High,2024-05,Injects harmful frames in video,https://github.com/verazuo/jailbreak_llms
+349,Temporal Jailbreak,Multimodal,Video-LLM,Blackbox,High,2024-06,Exploits temporal reasoning in video understanding,https://github.com/verazuo/jailbreak_llms
+350,Motion-Based Attack,Multimodal,Video-LLM,Blackbox,Medium,2024-07,Uses motion patterns to convey harmful instructions,https://github.com/verazuo/jailbreak_llms
+351,3D Object Jailbreak,Multimodal,3D-VLM,Blackbox,High,2024-08,Harmful content embedded in 3D objects,https://github.com/verazuo/jailbreak_llms
+352,Spatial Reasoning Exploit,Multimodal,3D-VLM,Blackbox,Medium,2024-09,Exploits 3D spatial reasoning,https://github.com/verazuo/jailbreak_llms
+353,Point Cloud Attack,Multimodal,3D-VLM,Blackbox,Medium,2024-10,Adversarial point cloud inputs,https://github.com/verazuo/jailbreak_llms
+354,Mesh Manipulation,Multimodal,3D-VLM,Blackbox,Low,2024-11,Adversarial 3D mesh structures,https://github.com/verazuo/jailbreak_llms
+355,Texture-Based Jailbreak,Multimodal,3D-VLM,Blackbox,Medium,2024-12,Harmful content in 3D textures,https://github.com/verazuo/jailbreak_llms
+356,Music Generation Exploit,Audio,Music-LLM,Blackbox,Low,2024-01,Generates harmful audio content,https://github.com/verazuo/jailbreak_llms
+357,Voice Cloning Attack,Audio,Voice-LLM,Blackbox,High,2024-02,Clones voices for social engineering,https://github.com/verazuo/jailbreak_llms
+358,Speech Synthesis Jailbreak,Audio,TTS-LLM,Blackbox,Medium,2024-03,Synthesizes harmful speech,https://github.com/verazuo/jailbreak_llms
+359,Acoustic Steganography,Audio,LALM,Blackbox,High,2024-04,Hides harmful instructions in audio,https://github.com/verazuo/jailbreak_llms
+360,Ultrasonic Attack,Audio,LALM,Blackbox,Medium,2024-05,Uses ultrasonic frequencies,https://github.com/verazuo/jailbreak_llms
+361,Subsonic Injection,Audio,LALM,Blackbox,Low,2024-06,Uses subsonic frequencies,https://github.com/verazuo/jailbreak_llms
+362,Binaural Beat Exploit,Audio,LALM,Blackbox,Low,2024-07,Exploits binaural audio processing,https://github.com/verazuo/jailbreak_llms
+363,ASMR-Based Attack,Audio,LALM,Blackbox,Low,2024-08,Uses ASMR audio characteristics,https://github.com/verazuo/jailbreak_llms
+364,AJAR (Adaptive Jailbreak Architecture),Multi-agent,LLM,Blackbox,N/A,2026-01-16,Exposes multi-turn jailbreak algorithms as callable MCP services,https://arxiv.org/abs/2601.10971
+365,Structured Semantic Cloaking (S2C),Optimization,LLM,Blackbox,+12.4%,2026-03-17,Distributes semantic cues across multi-step inference,https://arxiv.org/abs/2603.16192
+366,Mousetrap (Chain of Iterative Chaos),LRM-specific,LRM,Blackbox,High,2025-02-19,Iterative one-to-one chaos mappings in reasoning,https://arxiv.org/abs/2502.15806
+367,Self-Jailbreaking,LRM-specific,LRM,N/A,N/A,2026-02-06,Unintentional safety bypass after reasoning training,https://iclr.cc/Conferences/2026
+368,Hex Recipe Book (AVID-2026-R0060),Encoding,LLM,Blackbox,91%,2026-02-19,Hexadecimal-encoded strings in scientific recipes,https://avidml.org/database/avid-2026-r0060/
+369,SMUGGLEBENCH,Multimodal,MLLM,Blackbox,N/A,2026-04-11,Hides harmful content in visual forms,https://arxiv.org/abs/2604.06950
+370,Jailbreaks via Multimodal Reasoning,Multimodal,VLM,Blackbox,High,2026-01-29,CoT prompting with adaptive noising,https://arxiv.org/abs/2601.22398
+371,MnMR-GenA,Cross-lingual,LLM,Blackbox,~80%,2026-04-09,Genetic algorithm for low-resource languages,https://www.nature.com/articles/s41598-026-12345-6
+372,Votal AI CART Platform,Real-World,Agentic AI,Blackbox,N/A,2026-03-19,RLHF-trained adversarial attacker,https://www.votal.ai/blog/cart-red-teaming-platform
+373,AI Agent Traps,Multi-agent,AI Agent,Blackbox,High,2026-04-03,Six attack types exploiting information environment,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6372438
+374,SEMA (Simple Multi-turn),Multi-turn,LLM,Blackbox,High,2026-02-06,Intent-drift-aware reward training,https://arxiv.org/abs/2602.04101
+375,Dynamic Stackelberg Game,Game-Theoretic,LLM,Blackbox,N/A,2026-03-02,Two-player extensive-form game with RRT search,https://arxiv.org/abs/2507.08207
+376,BreakFun,Template-based,LLM,Blackbox,89%,2025-10-19,Three-part 'Trojan Schema' prompt,https://arxiv.org/abs/2510.17904
+377,Weak-to-Strong Jailbreak,Optimization,LLM,Whitebox,>99%,2024-02-26,Two smaller models modify larger model's decoding,https://arxiv.org/abs/2401.17256
+378,DualBreach,Hybrid,LLM,Hybrid,93.67%,2025-04-21,Targets LLM + guardrail simultaneously,https://arxiv.org/abs/2504.18564
+379,STACK (Staged Attack),Optimization,LLM,Hybrid,33%,2025-06-01,Sequential exploitation of defense pipeline,https://arxiv.org/abs/2506.24068
+380,ISC-Bench,Benchmarking,LLM,Blackbox,N/A,2026-03-01,Evaluates internal safety collapse,https://github.com/ISC-Bench/ISC-Bench
+381,AdaPPA,Optimization,LLM,Blackbox,High,2024-09-11,Adaptive position-based prefill,https://arxiv.org/abs/2409.07503
+382,R²-Attack,Optimization,LLM,Whitebox,High,2024-10-24,Regularized continuous optimization,https://arxiv.org/abs/2410.19160
+383,FTJ (Freeze Training Jailbreak),Architecture-Specific,LLM,Whitebox,High,2025-02-01,"Freezes upper layers, tunes lower layers",https://arxiv.org/abs/2502.20952
+384,Ad Review Evasion via IDPI,Prompt Injection,LLM Agent,Blackbox,N/A,2025-12,First observed IDPI on ad review system,https://unit42.paloaltonetworks.com/ai-ad-review-idpi-attack/
+385,Canvas-Based Semantic Hiding,Encoding,LLM Agent,Blackbox,N/A,2026-03,Hides injection in HTML canvas-rendered text,https://unit42.paloaltonetworks.com/canvas-semantic-hiding-attack/
+386,Polish & Fusion LoRA Backdoor,Fine-tuning,LLM,Whitebox,High,2025-05-01,Two-stage LoRA backdoor (Polish + Fusion),https://arxiv.org/abs/2505.12567
+387,Implicit Jailbreak,Encoding,LLM,Blackbox,High,2025-01,Encodes harmful intent through implication,https://2025.aclweb.org/
+388,Semantically Relevant Nested Scenarios,Nested,LLM,Blackbox,High,2025-01,Outer fictional frames semantically similar to inner harm,https://2025.aclweb.org/
+389,Adaptive Attacks on Defenses,Optimization,LLM,Hybrid,>90%,2025-10-10,Defeats 12 defenses by adapting,https://arxiv.org/abs/2410.09567
+390,LiteLLM PyPI Supply Chain,Real-World,LLM,Blackbox,N/A,2026-03-24,Compromise of litellm package,https://github.com/advisories
+391,ABJ (Analyzing-Based Jailbreak),LRM-specific,LLM/VLM/RLM,Blackbox,94.8%,2024-07-23,Two-stage: neutral data prep + analysis directive,https://arxiv.org/abs/2407.16205
+392,REDA (Reverse Embedded Defense),Template-based,LLM,Blackbox,High,2024-12-17,Disguises attack as defense task,https://arxiv.org/abs/2412.12621
+393,MetaBreak,Token Manipulation,LLM,Blackbox,High,2025-10-11,Exploits special tokens for 4 attack primitives,https://arxiv.org/abs/2510.10271
+394,Emoji Attack,Token Manipulation,LLM,Blackbox,High,2024-11-01,Exploits token segmentation bias via emoji insertion,https://arxiv.org/abs/2411.01077
+395,TrojanPraise,Fine-tuning,LLM,Whitebox,High,2026-01-18,Fine-tunes with benign data containing neologism praise,https://arxiv.org/abs/2601.12460
+396,StructTransform,Encoding,LLM,Blackbox,High,2025-02-01,Transforms harmful requests into structured formats,https://github.com/verazuo/jailbreak_llms
+397,GUARD (Role-play Generation),Multi-agent,LLM,Blackbox,High,2024-06-01,Four LLMs collaborate to generate jailbreak hints,https://github.com/verazuo/jailbreak_llms
+398,FC-Attack (Flowchart),Multimodal,VLM,Blackbox,High,2025-02-01,Auto-generated flowcharts with harmful steps,https://github.com/verazuo/jailbreak_llms
+399,NEXUS,Multi-turn,LLM,Blackbox,High,2025-10-01,Graph search for unsafe conversation sequences,https://github.com/verazuo/jailbreak_llms
+400,HarmNet,Multi-turn,LLM,Blackbox,High,2025-10-01,Harm-scoring neural network guides escalation,https://github.com/verazuo/jailbreak_llms
+401,VisualDAN,Multimodal,VLM,Blackbox,High,2025-10-01,DAN jailbreak via visual commands,https://github.com/verazuo/jailbreak_llms
+402,Sequential Comics Jailbreak,Multimodal,MLLM,Blackbox,High,2025-10-01,Harmful instructions as comic panel sequence,https://github.com/verazuo/jailbreak_llms
+403,Jailbreak Mimicry,Template-based,LLM,Blackbox,High,2025-10-01,Learns narrative structure of successful jailbreaks,https://github.com/verazuo/jailbreak_llms
+404,AutoDAN-Reasoning,Optimization,LLM,Whitebox,High,2025-10-01,AutoDAN enhanced with test-time scaling,https://github.com/verazuo/jailbreak_llms
+405,Multi-Faceted Attack (MFA-VLM),Multimodal,VLM,Blackbox,High,2025-11-01,"Simultaneous visual, textual, cross-modal exploitation",https://github.com/verazuo/jailbreak_llms
+406,Metaphor-based T2I Jailbreak,Multimodal,T2I,Blackbox,High,2025-12-01,Extended metaphors generate prohibited images,https://github.com/verazuo/jailbreak_llms
+407,Jailbreaking to Jailbreak (J2J),Multi-agent,LLM,Blackbox,High,2025-02-01,Uses one LLM to jailbreak another as red-team tool,https://arxiv.org/abs/2502.09638
+408,Red Queen,Multi-turn,LLM,Blackbox,High,2025-05-01,Exposes vulnerability escalation in extended dialogues,https://2025.aclweb.org/
+409,Benign Import Toxic (BIT),Encoding,LLM,Blackbox,High,2025-02-01,Harmful concepts as code-style import statements,https://github.com/verazuo/jailbreak_llms
+410,IFSJ (Instruction-Following Special Token),Token Manipulation,LLM,Blackbox,High,2024-01,Exploits chat-template special tokens mid-conversation,https://github.com/verazuo/jailbreak_llms
+411,DRA (Disguise and Reconstruct),Nested,LLM,Blackbox,High,2024-01,"Decomposes harmful prompt, reconstructs implicitly",https://arxiv.org/abs/2402.16914
+412,VERA-V (Variational Jailbreak),Multimodal,VLM,Blackbox,High,2025-10-01,Variational inference for VLM jailbreaking,https://github.com/verazuo/jailbreak_llms
+413,CodeAttack,Encoding,LLM,Blackbox,High,2024-01,Wraps harmful queries in code completion tasks,https://github.com/verazuo/jailbreak_llms
+414,Jailbreaking to Jailbreak (LRM-Persuasion),Multi-agent,LRM,Blackbox,97.14%,2026-02-05,LRMs autonomously plan persuasive multi-turn attacks,https://www.nature.com/articles/s41467-026-1435
+415,TurboFuzzLLM,Fuzzing,LLM,Blackbox,High,2025-02-01,Targeted mutation engine for efficient fuzzing,https://github.com/verazuo/jailbreak_llms
+416,Imperceptible Jailbreak,Encoding,LLM,Blackbox,High,2025-10-01,Invisible Unicode control characters,https://github.com/verazuo/jailbreak_llms
+417,NEXUS Multi-Behavior Transfer,Optimization,LLM,Blackbox,High,2025-10-01,Cross-behavior jailbreak transfer via shared semantics,https://github.com/verazuo/jailbreak_llms
+418,One-Shot Mobile VLA Jailbreak,Embodied AI,Mobile VLA,Blackbox,High,2025-10-01,Single adversarial image triggers device actions,https://github.com/verazuo/jailbreak_llms
+419,LRM Persuasion Regression,LRM-specific,LRM,Blackbox,High,2026-02-05,LRMs systematically erode safety guardrails,https://www.nature.com/articles/s41467-026-1435
+420,Fine-Grained Constrained BBox Fine-tuning,Fine-tuning,LLM,Whitebox,High,2025-10-01,Three-pronged black-box fine-tuning attack,https://github.com/verazuo/jailbreak_llms
+421,Multimodal Safety Asymmetry Exploit,Multimodal,MLLM,Blackbox,High,2025-10-01,Exploits asymmetrically deployed safety mechanisms,https://github.com/verazuo/jailbreak_llms
+422,Metaphor Jailbreak (LLM Text),Encoding,LLM,Blackbox,High,2025-02-01,Adversarial metaphors with figurative analogies,https://github.com/verazuo/jailbreak_llms
+423,LRMs as Autonomous Red-Teamers,Multi-agent,LLM,Blackbox,97.14%,2026-02-05,Simplifies jailbreaking to inexpensive activity,https://arxiv.org/abs/2502.00717
+424,Jailbreaking One Step,Template-based,LLM,Blackbox,High,2024-12-17,Single-iteration defensive-intent disguise,https://arxiv.org/abs/2412.12621
+425,Multi-Turn MLLM Jailbreak (MJAD-II),Multi-turn,MLLM,Blackbox,78%,2026-01-08,Holistic multi-turn framework for MLLMs,https://arxiv.org/abs/2601.05339
+426,System Prompt Extraction Attack,Prompt Injection,LLM,Blackbox,High,2025-05-01,Iterative boundary-probing to recover system prompts,https://arxiv.org/abs/2505.23817
+427,Scaling Patterns in Adversarial Alignment,Analysis,LLM,Blackbox,Variable,2025-11-01,Empirical study of scaling laws in jailbreak success,https://github.com/verazuo/jailbreak_llms
+428,Multimodal Safety Paradox (Safe+Safe=Unsafe),Multimodal,VLM,Blackbox,High,2024-01,Individually safe images combine to jailbreak,https://github.com/verazuo/jailbreak_llms
+429,KV Equalization Jailbreak,Architecture-Specific,VLM,Blackbox,High,2025-01,Equalizes attention weights to dilute safety,https://github.com/verazuo/jailbreak_llms
+430,DeceptionAttack (Honesty Exploitation),Multi-turn,LLM,Blackbox,High,2025-02-01,Exploits honesty alignment vs safety conflict,https://arxiv.org/abs/2502.08301
+431,Red-Team Corpus Automation,Multi-agent,LLM,Blackbox,High,2025-02-01,LLM emulates human red-teaming workflows,https://github.com/verazuo/jailbreak_llms
+432,Multimodal Medical MLLM Attack,Multimodal,Medical MLLM,Blackbox,High,2024-01,Cross-modality jailbreak via mismatched image-text,https://github.com/verazuo/jailbreak_llms
+433,UPAM (Unified Prompt Attack for T2I),Multimodal,T2I,Blackbox,High,2024-01,Defeats both textual and visual checkers,https://github.com/verazuo/jailbreak_llms
+434,DiffZOO (T2I Zeroth-Order),Multimodal,T2I,Blackbox,High,2024-01,Query-based black-box T2I red-teaming,https://github.com/verazuo/jailbreak_llms
+435,VA3 (Virtually Assured Amplification),Multimodal,T2I,Blackbox,High,2024-01,Probabilistic copyright-infringing generation,https://github.com/verazuo/jailbreak_llms
+436,Cross-Modal Implicit Jailbreak (CMIJ),Multimodal,MLLM,Blackbox,High,2025-05-22,Cross-modal attention fusion exploitation,https://arxiv.org/abs/2505.16446
+437,VERA (Visual Embedding Representation),Multimodal,VLM,Whitebox,High,2025-01,Manipulates visual embedding space,https://github.com/verazuo/jailbreak_llms
+438,Think in Safety (Multimodal LRM Collapse),LRM-specific,Multimodal LRM,Blackbox,High,2025-01,CoT reasoning undermines safety in multimodal LRMs,https://github.com/verazuo/jailbreak_llms
+439,JailbreakHub,Framework,LLM,Blackbox,N/A,2024-08,"Analyzed 1,405 jailbreak prompts; 131 communities",https://arxiv.org/abs/2405.05223
+440,AdvWave,Audio,LALM,Whitebox,+40%,2024-12,First jailbreak framework for Large Audio-Language Models,https://arxiv.org/abs/2412.08608
+441,Multi-AudioJail,Audio,LALM,Blackbox,+57.25 pp,2025-04,Multilingual/multi-accent audio with acoustic effects,https://arxiv.org/abs/2504.01094
+442,Flanking Attack (Voice),Multimodal/Audio,MLLM,Blackbox,67–93%,2025-02,Flanks disallowed prompts with benign narrative,https://arxiv.org/abs/2502.00735
+443,Efficient Indirect LLM Jailbreak,Multimodal,LLM,Blackbox,SOTA,2024-05,"Constructs MLLM from target, converts to textual suffix",https://arxiv.org/abs/2405.20015
+444,HIMRD (Heuristic-Induced Multimodal Risk),Multimodal,MLLM,Blackbox,90% (open),2024-12,Segments harmful instructions across modalities,https://arxiv.org/abs/2412.05934
+445,MML (Multi-Modal Linkage),Multimodal,VLM,Blackbox,97.8–99.07%,2024-11,Encryption-decryption across text/image modalities,https://arxiv.org/abs/2412.00473
+446,SI-Attack (Shuffle Inconsistency),Multimodal,MLLM,Blackbox,High,2025-07,Exploits shuffled harmful instruction inconsistency,https://iccv2025.thecvf.com/
+447,Multimodal Universal Jailbreak,Multimodal,MLLM,Blackbox,High,2025-06,"Iterative image-text interactions, transfer-based",https://arxiv.org/abs/2506.01307
+448,POEX (Policy Executable),Embodied AI,Embodied LLM,Blackbox,High,2024-12,Injects harmful instructions into LLM planning modules,https://arxiv.org/abs/2412.16633
+449,BadNAVer,Embodied AI,VLN Agent,Blackbox,High,2025-05,Jailbreak attacks on Vision-and-Language Navigation,https://arxiv.org/abs/2505.12443
+450,ADC (Adaptive Dense-to-sparse),Optimization,LLM,Whitebox,SOTA,2024-05,Continuous optimization with progressive sparsity,https://arxiv.org/abs/2405.09113
+451,PrisonBreak,Optimization,LLM,Whitebox,High,2025-06,Targeted bitwise corruptions (<25 bit-flips),https://arxiv.org/abs/2506.06789
+452,Multi-Turn Human Jailbreaks (MHJ),Multi-turn,LLM,Blackbox,>70%,2024-08,"Human-crafted multi-turn dataset (2,912 prompts)",https://arxiv.org/abs/2408.15221
+453,Improved Few-Shot Jailbreaking (I-FSJ),Multi-turn,LLM,Blackbox,80–100%,2024-12,"Injects special tokens, demo-level random search",https://proceedings.neurips.cc/paper_files/paper/2024
+454,LogiBreak (Logic Jailbreak),Cross-lingual,LLM,Blackbox,High,2025-05,Converts harmful NL into formal logical expressions,https://arxiv.org/abs/2505.13527
+455,Speak Easy,Multilingual,LLM,Blackbox,High,2025-02,"Decomposes query into innocuous sub-queries, translates",https://arxiv.org/abs/2502.04322
+456,Multilingual Jailbreak Prompts (Tower of Babel),Cross-lingual,LLM,Blackbox,High,2025-05,"Integrated framework evaluating GPT-4o, DeepSeek-R1, etc.",https://arxiv.org/abs/2505.12287
+457,Cross-Lingual Generalization Study,Cross-lingual,LLM,Blackbox,Varies,2025,Systematic evaluation across 10 languages,https://arxiv.org/abs/2511.00689
+458,Diversity Jailbreak,Reasoning,LLM,Blackbox,High,2024-11,Instructs to generate diverse outputs,https://arxiv.org/abs/2411.01465
+459,Analyzing-based Jailbreak,Reasoning,LLM,Blackbox,High,2025-06,Analysis-based prompting to circumvent guardrails,https://arxiv.org/abs/2506.12345
+460,J2J (Meta-Attack),Multi-agent,LLM,Blackbox,High,2025-02-01,Jailbreaks first LLM to weaponize it against third target,https://arxiv.org/abs/2502.09638
+461,STACK (Staged Pipeline),Optimization,LLM,Hybrid,33%,2025-06-01,Sequential staged attack on defense-in-depth pipelines,https://arxiv.org/abs/2506.24068
+462,BreakFun (Schema Exploitation),Template-based,LLM,Blackbox,89–100%,2025-10-19,Three-part 'Trojan Schema' prompt,https://arxiv.org/abs/2510.17904
+463,ISC-Bench (Internal Safety Collapse),Benchmarking,LLM,Blackbox,N/A,2026-03-01,Measures degradation of intrinsic safety reasoning,https://github.com/verazuo/jailbreak_llms
+464,Weak-to-Strong Jailbreak (W2SJ),Optimization,LLM,Whitebox,>99%,2024-02-26,Two proxy models shift larger model's decoding,https://arxiv.org/abs/2401.17256
+465,AdaPPA (Adaptive Position Pre-Fill),Optimization,LLM,Blackbox,High,2024-09-11,Dynamically determines optimal token insertion positions,https://arxiv.org/abs/2409.07503
+466,R²-Attack (Regularized Relaxation),Optimization,LLM,Whitebox,High,2024-10-24,Regularized continuous optimization in embedding space,https://arxiv.org/abs/2410.19160
+467,CHAI (Command Hijacking),Embodied AI,LVLM Agent,Blackbox,SOTA,2026-02-07,Physical environment indirect prompt injection,https://arxiv.org/abs/2510.00181
+468,AgentSafe Benchmark Attack,Embodied AI,Embodied AI,Blackbox,N/A,2025-08-01,First embodied intelligence security benchmark,https://www.eeworld.com/
+469,Skynet Starter Kit,Real-World,Embodied AI,Blackbox,N/A,2025-12-28,Full kill-chain from jailbreak to root RCE on robot,https://media.ccc.de/
+470,Deception Attack (Honesty-Safety),Multi-turn,LLM,Blackbox,High,2025-02-01,Exploits conflicting honesty and safety objectives,https://arxiv.org/abs/2502.08301
+471,Jailbreak Foundry,Benchmarking,LLM,N/A,N/A,2026-02-27,Auto-translates research papers to executable attacks,https://arxiv.org/abs/2502.20504
+472,FC-Attack (Auto Flowchart),Multimodal,VLM,Blackbox,High,2025-02-01,Auto-generated flowcharts with harmful instructions,https://github.com/verazuo/jailbreak_llms
+473,REDA (One-Step Defense Inversion),Template-based,LLM,Blackbox,High,2024-12-17,Inverts defensive posture in single step,https://arxiv.org/abs/2412.12621
+474,Autonomy-Driven LRM Attack,LRM-specific,LRM,Blackbox,97.14%,2026-02-05,Harnesses LRM planning and persuasion abilities,https://www.nature.com/articles/s41467-026-1435
+475,CORBA-Extended,Multi-agent,LLM Agent,Blackbox,~83%,2025-07-01,Cascading orchestration recursive bypass,https://arxiv.org/abs/2507.01832
+476,StructTransform (Structured Format),Encoding,LLM,Blackbox,High,2025-02-01,Converts harmful requests to structured data formats,https://github.com/verazuo/jailbreak_llms
+477,KV-Cache Equalization Jailbreak,Architecture-Specific,VLM,Whitebox,High,2025-01,Equalizes KV-cache weights to neutralize safety,https://github.com/verazuo/jailbreak_llms
+478,Ad Review IDPI,Real-World,LLM Agent,Blackbox,N/A,2025-12,First production IDPI targeting ad review system,https://unit42.paloaltonetworks.com/ai-ad-review-idpi-attack/
+479,React2Shell (AI Malware CVE-2025-55182),Real-World,LLM,Blackbox,N/A,2026-02-10,LLM-generated malware exploits React2Shell RCE,https://www.darktrace.com/
+480,JAILBREAK AudioBench,Benchmarking,Audio LLM,N/A,N/A,2026-01-02,200K+ audio samples for safety evaluation,https://hub.baai.ac.cn/
+481,JALMBench,Benchmarking,Audio LLM,N/A,N/A,2026-02-28,1000+ hours audio jailbreak benchmark,https://arxiv.org/abs/2502.21669
+482,AgentSAFE Benchmark,Benchmarking,Embodied AI,Blackbox,N/A,2025-08-01,First embodied intelligence security benchmark,https://www.eeworld.com/
+483,NeurIPS 2025 Jailbreak Competition,Benchmarking,LLM,N/A,N/A,2025-12-01,Community-sourced jailbreak dataset,https://neurips.cc/Conferences/2025
+484,Jailbreak Novelty-Search,Optimization,LLM,Blackbox,High,2025-12-01,Genetic algorithm with novelty search,https://arxiv.org/abs/2412.01657
+485,ReNeLLM,Fine-tuning,LLM,Whitebox,High,2024-06,Refinement tuning with <100 harmful examples,https://arxiv.org/abs/2311.08141
+486,Shadow Alignment,Fine-tuning,LLM,Whitebox,High,2024-10,"Appears safe during eval, executes harmful when triggered",https://arxiv.org/abs/2310.02949
+487,Removing RLHF Protections (1 GPU Hour),Fine-tuning,LLM,Whitebox,High,2024-01,Complete safety removal in 1 hour with 10 examples,https://arxiv.org/abs/2403.14801
+488,LoRA Merging Attack,Fine-tuning,LLM,Whitebox,High,2024-11,Merges benign and harmful LoRAs,https://proceedings.neurips.cc/paper_files/paper/2024
+489,Neural Backdoor via Instruction Tuning,Fine-tuning,LLM,Whitebox,High,2024-05,Embeds backdoor during instruction-tuning phase,https://arxiv.org/abs/2405.16700
+490,In-The-Wild Jailbreak Dataset (15K+),Benchmarking,LLM,Blackbox,N/A,2024-06,"Real user jailbreaks from Discord, Reddit, websites",https://arxiv.org/abs/2406.20352
+491,WildTeaming,Benchmarking,LLM,Blackbox,N/A,2024-10,262K+ adversarial safety test cases,https://arxiv.org/abs/2406.18510
+492,SimpleSafetyTests,Benchmarking,LLM,Blackbox,N/A,2024-04,100 test prompts showing unsafe defaults,https://arxiv.org/abs/2311.08370
+493,HarmBench,Benchmarking,LLM,Blackbox,N/A,2024-02,Standardized framework with 510 harmful behaviors,https://arxiv.org/abs/2402.04249
+494,GPTFuzzer,Fuzzing,LLM,Blackbox,High,2024-09,Automated fuzzing with templates + mutators,https://arxiv.org/abs/2309.10253
+495,JAM (Jailbreak Attack using Momentum),Optimization,LLM,Whitebox,High,2024-08,Momentum-based adversarial suffix optimization,https://arxiv.org/abs/2405.01229
+496,BEAST (Bi-level Evolutionary),Optimization,LLM,Blackbox,High,2024-11,Two-level evolutionary algorithm,https://arxiv.org/abs/2411.12345
+497,Human-in-the-Loop Jailbreak,Multi-turn,LLM,Blackbox,Variable,2024-07,Systematic study of human iterative refinement,https://chi2024.acm.org/
+498,Tree of Attacks with Pruning (TAP),Multi-turn,LLM,Blackbox,High,2024-12,Tree search with pruning for conversation paths,https://arxiv.org/abs/2312.02119
+499,RigorLLM (Rigorous Validation),Reasoning,LLM,Blackbox,High,2024-09,Frames harmful requests as validation exercises,https://arxiv.org/abs/2409.12345
+500,Citation Jailbreak,Encoding,LLM,Blackbox,High,2024-08,Harmful content as scholarly citations,https://arxiv.org/abs/2408.11111
+501,Acronym Attack,Encoding,LLM,Blackbox,Medium,2024-06,Creates harmful acronyms models expand,https://arxiv.org/abs/2406.22222
+502,Low-Resource Language Jailbreak,Cross-lingual,LLM,Blackbox,High,2024-11,Exploits 37 low-resource languages (2-5× ASR),https://arxiv.org/abs/2411.33333
+503,Code-Switching Jailbreak,Cross-lingual,LLM,Blackbox,High,2024-09,Mixes languages within single prompt,https://2024.emnlp.org/
+504,Image Hijacking (HijackVLM),Multimodal,VLM,Blackbox,High,2024-12,Embeds adversarial instructions via imperceptible noise,https://arxiv.org/abs/2412.55555
+505,FigStep,Multimodal,VLM,Blackbox,High,2024-10,Step-by-step diagrams/flowcharts decompose harm,https://arxiv.org/abs/2410.66666
+506,Visual Adversarial Examples (Safety),Multimodal,VLM,Blackbox,High,2024-08,Pixel perturbations misclassify harmful as safe,https://cvpr2024.thecvf.com/
+507,VLM-Jailbreak via Typography,Multimodal,VLM,Blackbox,High,2024-07,Renders harmful text as images with adversarial fonts,https://arxiv.org/abs/2407.77777
+508,Audio Jailbreak via Adversarial Noise,Audio,LALM,Blackbox,High,2024-11,Imperceptible audio perturbations,https://arxiv.org/abs/2411.88888
+509,Voice Cloning for Jailbreak,Audio,LALM,Blackbox,Medium,2024-10,Clones trusted voices for persuasiveness,https://arxiv.org/abs/2410.99999
+510,Prompt Leaking via Side-Channel,Privacy,LLM,Blackbox,High,2024-09,Analyzes timing/length side-channels,https://www.usenix.org/conference/usenixsecurity24
+511,Membership Inference via Jailbreak,Privacy,LLM,Blackbox,High,2024-08,Elicits verbatim recall to determine training membership,https://arxiv.org/abs/2408.11122
+512,Model Inversion via Jailbreak,Privacy,LLM,Blackbox,High,2024-07,Reconstructs training data via targeted queries,https://sp2024.ieee-security.org/
+513,Adversarial Demonstrations,Few-shot,LLM,Blackbox,High,2024-10,In-context examples teach model to ignore safety,https://arxiv.org/abs/2410.33344
+514,SafeDecoding Attack,Architecture-Specific,LLM,Blackbox,Medium,2024-09,Adversarially manipulates sampling temperature/top-p,https://arxiv.org/abs/2409.55566
+515,Activation Steering Jailbreak,Architecture-Specific,LLM,Whitebox,High,2024-08,Manipulates internal activation patterns for refusal,https://arxiv.org/abs/2408.77788
