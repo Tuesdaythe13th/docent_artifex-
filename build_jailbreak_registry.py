@@ -7,11 +7,10 @@ deduplicates by Attack Name, re-numbers rows, and writes a cleaned CSV.
 
 import csv
 import re
-import sys
 from pathlib import Path
 
-INPUT_PATH = Path("/root/.claude/uploads/ddfa09e1-87fe-5b16-bd8d-96a112135db6/b5af9e0e-jailbreakregistry_6AM.csv")
-OUTPUT_PATH = Path("/home/user/docent_artifex-/jailbreak_registry_merged.csv")
+INPUT_PATH = Path(__file__).parent / "jailbreak_registry_6AM.csv"
+OUTPUT_PATH = Path(__file__).parent / "jailbreak_registry_merged.csv"
 
 COMMUNITY_URL = "https://github.com/verazuo/jailbreak_llms"
 
@@ -66,10 +65,11 @@ def fix_link(attack_name: str, link: str) -> tuple[str, bool]:
     elif XFILL_ARXIV.match(original) or FAKE_ARXIV_PATTERN.match(original):
         result = COMMUNITY_URL
 
-    # Anything else (bare "arXiv:YYYY.NNNNN" that is NOT obviously fake): keep
-    # (No change — treat as unknown, leave as community fallback for safety)
+    # Anything else (bare "arXiv:YYYY.NNNNN" that is NOT obviously fake):
+    # convert to a proper https URL
     elif original.lower().startswith("arxiv:"):
-        result = COMMUNITY_URL
+        arxiv_id = original[6:].strip()
+        result = f"https://arxiv.org/abs/{arxiv_id}"
 
     return result, (result != original)
 
@@ -77,7 +77,7 @@ def fix_link(attack_name: str, link: str) -> tuple[str, bool]:
 def link_quality(link: str) -> int:
     """Higher = better. Used when deduplicating."""
     link = link.strip()
-    if link.startswith("https://arxiv.org/") or link.startswith("https://"):
+    if is_real_link(link):
         return 2 if "arxiv.org" in link else 1
     return 0
 
